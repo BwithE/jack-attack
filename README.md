@@ -19,7 +19,7 @@ Jack-Attack is not made for illegal purposes. Use at your own RISK, preferrably 
 - Custom delay commands, e.g. `DELAY 2` to wait 2 seconds between key presses
 - Web UI for easy input and sending of keystrokes
 - Runs as a web server on port 80, accessible on your local network
-- Configures Raspberry Pi Zero as both USB HID gadget and Wi-Fi Access Point (SSID: `Jack-Attack`)
+- Configures Raspberry Pi Zero as both USB HID gadget and Wi-Fi Access Point (SSID: `JackAttack`)
 
 ---
 
@@ -57,6 +57,8 @@ A setup script is included to automate system preparation, USB gadget configurat
 2. Select Raspberry PI OS LITE 32bit
 
 3. Allow the RaspberryPi to associate to your personal network with internet access
+  - Recommend creating the username `jackattack` to make it easier for the scripts to work. If not, make sure to change username directories in the `setup.sh` before executing the script.
+
 
 4. After the SD card has been flashed; in bootfs; add the following to the end of cmdline.txt 
     ```
