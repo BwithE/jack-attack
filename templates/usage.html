@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Using This Device</h2>
+
+<p>This Pi Zero can:</p>
+<ul>
+  <li>Emulate a USB keyboard</li>
+  <li>Broadcast Wi-Fi for remote control</li>
+  <li>Send predefined or custom keystrokes to a target</li>
+</ul>
+
+<p>Use it to test USB-based injection attacks on Windows/macOS/Linux systems.</p>
+
+<h3>Input Script Format</h3>
+<p>The device parses and executes a series of keystrokes written in plain text. Each line is interpreted either as a keystroke command or a delay.</p>
+
+<h4>Supported Input Examples:</h4>
+
+<pre><code># Send lowercase text
+hello world
+
+# Send uppercase letters and special characters
+Hello, World!
+
+# Simulate holding modifier keys
+CTRL+ALT+DEL
+SHIFT+A
+
+# Add a delay in seconds
+DELAY 1.5
+
+# Combine multiple commands
+GUI+r
+DELAY 0.5
+cmd
+ENTER
+</code></pre>
+
+<h4>Special Keys Supported:</h4>
+<ul>
+  <li><code>ENTER</code>, <code>TAB</code>, <code>ESC</code>, <code>BACKSPACE</code></li>
+  <li>Modifier keys: <code>CTRL</code>, <code>SHIFT</code>, <code>ALT</code>, <code>GUI</code> (Windows/Command key)</li>
+  <li>Function keys: <code>F1</code> to <code>F12</code></li>
+  <li>Symbols and characters (e.g., <code>!@#$%^&*</code>)</li>
+</ul>
+
+<h4>Tips:</h4>
+<ul>
+  <li>Each line is processed top to bottom.</li>
+  <li>Combos like <code>CTRL+C</code> or <code>GUI+R</code> send simultaneous key presses.</li>
+  <li>Use <code>DELAY X</code> between commands to give the target system time to respond.</li>
+</ul>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Send Keystrokes</h1>
+
+<label for="scriptSelect">Preloaded Scripts:</label>
+<select id="scriptSelect">
+  <option value="">-- Select a Script --</option>
+  {% for name, content in scripts.items() %}
+    <option value="{{ content|e }}">{{ name }}</option>
+  {% endfor %}
+</select>
+
+<br><br>
+
+<form action="{{ url_for('keystrokes') }}" method="post">
+  <textarea id="inputBox" name="input" rows="10" cols="60"
+    placeholder="E.g. CTRL+ALT+DEL, Hello, ENTER"></textarea><br><br>
+  <button type="submit">Send</button>
+</form>
+
+{% if sent_text %}
+  <p><strong>Sent:</strong></p>
+  <pre>{{ sent_text }}</pre>
+{% endif %}
+
+<script>
+document.getElementById("scriptSelect").addEventListener("change", function() {
+  const selected = this.value;
+  if (selected) {
+    document.getElementById("inputBox").value = selected;
+  }
+});
+</script>
+{% endblock %}
