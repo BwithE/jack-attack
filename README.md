@@ -1,7 +1,9 @@
 # Jack-Attack
 
 Jack-Attack was created for research inspired by P4wnP1.
+
 Jack-Attack is a web application designed to run on a Raspberry Pi Zero configured as a USB HID gadget.  
+
 It allows sending custom keyboard keystrokes and key combinations via a web interface, making it ideal for automation, testing, or DIY USB keyboard projects.
 
 ---
