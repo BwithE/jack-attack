@@ -6,12 +6,10 @@ Jack-Attack was created for research inspired by P4wnP1.
 
 It allows sending custom keyboard keystrokes and key combinations via a web interface, making it ideal for automation, testing, or DIY USB keyboard projects.
 
----
-
 ## DISCLAIMER
 Jack-Attack is not made for illegal purposes. Use at your own RISK, preferrably with PERMISSION.
 
----
+
 ## Features
 
 - Send single keys, key combos (e.g. `CTRL+ALT+DEL`, `GUI+SPACE` for macOS Spotlight)
@@ -21,14 +19,10 @@ Jack-Attack is not made for illegal purposes. Use at your own RISK, preferrably 
 - Runs as a web server on port 80, accessible on your local network
 - Configures Raspberry Pi Zero as both USB HID gadget and Wi-Fi Access Point (SSID: `JackAttack`)
 
----
-
 ## Requirements
 
 - Raspberry Pi Zero (configured for USB HID gadget and Wi-Fi AP)
 - USB Dongle Breakout Board
-
----
 
 ## Automated Setup Script
 
@@ -48,8 +42,6 @@ A setup script is included to automate system preparation, USB gadget configurat
   - Static IP: `10.0.3.14`
 - Configures and enables `hostapd` and `dnsmasq` for DHCP and Wi-Fi management
 - Disables conflicting network services like `wpa_supplicant` and `NetworkManager`
-
----
 
 ## How to Run Setup
 1. Using the Raspberry-Pi imager, select the RaspberryPi Zero W
@@ -108,15 +100,11 @@ A setup script is included to automate system preparation, USB gadget configurat
 
 10. The script will configure everything and then reboot the Pi automatically.
 
----
-
 ## Accessing the App
 
 - After reboot, connect to the Wi-Fi Access Point named `JackAttack` using password `jackattack`.
 - Access the web interface at:  
   `http://10.0.3.14/`
-
----
 
 ## Usage
 
@@ -139,8 +127,6 @@ A setup script is included to automate system preparation, USB gadget configurat
 
 - `DELAY <seconds>` pauses the typing for the specified number of seconds.
 - Press **Send** to transmit the keys over the USB HID interface.
-
----
 
 ## Important Notes
 
