@@ -173,7 +173,7 @@ def keystrokes():
 
 
 @app.route('/usage')
-def ap():
+def usage():
     return render_template('usage.html', title='Usage - JackAttack')
 
 
