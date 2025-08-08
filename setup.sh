@@ -17,6 +17,7 @@ mkdir -p /opt/jackattack/static
 mkdir -p /opt/jackattack/scripts
 
 cp jackattack.py /opt/jackattack/jackattack.py
+cp logo.png /opt/jackattack/logo.png
 cp static/style.css /opt/jackattack/static/
 cp templates/* /opt/jackattack/templates/
 cp scripts/* /opt/jackattack/scripts/
