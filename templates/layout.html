@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Mobile friendly -->
   <title>{{ title }}</title>
+
+  <!-- App Icons & Mobile Web App Meta -->
+  <meta name="theme-color" content="#121212">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='icon.png') }}">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -23,21 +32,22 @@
   </div>
 
   <script>
-  // Simple toggle for dropdown on mobile
-  document.querySelector('.dropbtn').addEventListener('click', () => {
-    document.querySelector('.dropdown-content').classList.toggle('show');
-  });
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      let dropdowns = document.getElementsByClassName("dropdown-content");
-      for (let i = 0; i < dropdowns.length; i++) {
-        let openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
+    // Simple toggle for dropdown on mobile
+    document.querySelector('.dropbtn').addEventListener('click', () => {
+      document.querySelector('.dropdown-content').classList.toggle('show');
+    });
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          let openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
         }
       }
     }
-  }
   </script>
 </body>
 </html>
