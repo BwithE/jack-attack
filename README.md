@@ -81,9 +81,10 @@ A setup script is included to automate system preparation, USB gadget configurat
 
 6. Power on the RasperryPi, and wait for it to connect to your access point
 
-7. Copy the setup script and web app files (`jackattack.py`, `templates/`, `static/`) to your Raspberry Pi Zero.
-    ```
-    scp -r * jackattack@<IP>:/home/jackattack/
+7. Clone this repo
+    ```bash
+    sudo apt install git -y
+    git clone https://github.com/bwithe/jackattack
     ```
 
 8. Make sure the setup script is executable:
