@@ -1,13 +1,13 @@
-# Jack-Attack
+# JackAttack
 
-Jack-Attack is a web application designed to run on a Raspberry Pi Zero configured as a USB HID gadget.  
+JackAttack is a web application designed to run on a Raspberry Pi Zero configured as a USB HID gadget.  
 
-Jack-Attack was created for research inspired by P4wnP1.
+JackAttack was created for research inspired by P4wnP1.
 
 It allows sending custom keyboard keystrokes and key combinations via a web interface, making it ideal for automation, testing, or DIY USB keyboard projects.
 
 ## DISCLAIMER
-Jack-Attack is not made for illegal purposes. Use at your own RISK, preferrably with PERMISSION.
+JackAttack is not made for illegal purposes. Use at your own RISK, preferrably with PERMISSION.
 
 
 ## Features
@@ -21,7 +21,7 @@ Jack-Attack is not made for illegal purposes. Use at your own RISK, preferrably 
 
 ## Requirements
 
-- Raspberry Pi Zero (configured for USB HID gadget and Wi-Fi AP)
+- Raspberry Pi Zero (configured for USB HID gadget and WiFi AP)
 - USB Dongle Breakout Board
 
 ## Automated Setup Script
@@ -36,7 +36,7 @@ A setup script is included to automate system preparation, USB gadget configurat
 - Creates a USB gadget boot script that sets up the HID and ECM USB functions
 - Creates and enables a systemd service (`jackgadget.service`) to initialize the USB gadget at boot
 - Creates and enables a systemd service (`jackattack.service`) to run the Flask app on startup
-- Sets up the Pi as a Wi-Fi Access Point:
+- Sets up the Pi as a WiFi Access Point:
   - SSID: `JackAttack`
   - WPA2 passphrase: `jackattack`
   - Static IP: `10.0.3.14`
@@ -128,11 +128,3 @@ A setup script is included to automate system preparation, USB gadget configurat
 
 - `DELAY <seconds>` pauses the typing for the specified number of seconds.
 - Press **Send** to transmit the keys over the USB HID interface.
-
-## Important Notes
-
-- The app writes HID reports directly to `/dev/hidg0`, created by the USB gadget setup.
-- The USB gadget also exposes a network interface (ECM function).
-- Use with caution—sending key sequences to connected hosts may cause unexpected behavior.
-- You must run the setup script on a Raspberry Pi Zero or compatible device with gadget support.
-- Reboot is required after setup to apply all configurations.
