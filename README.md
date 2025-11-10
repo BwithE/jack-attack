@@ -84,7 +84,7 @@ A setup script is included to automate system preparation, USB gadget configurat
 7. Clone this repo
     ```bash
     sudo apt install git -y
-    git clone https://github.com/bwithe/jackattack
+    git clone https://github.com/bwithe/jack-attack
     ```
 
 8. Make sure the setup script is executable:
