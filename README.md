@@ -1,7 +1,5 @@
 # Jack-Attack
 
-https://github.com/user-attachments/assets/d4ebe9eb-6944-47b6-9603-54d18cf030b2
- 
 Jack-Attack is a web application designed to run on a Raspberry Pi Zero configured as a USB HID gadget.  
 
 Jack-Attack was created for research inspired by P4wnP1.
